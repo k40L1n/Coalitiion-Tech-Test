@@ -1,0 +1,284 @@
+:root {
+    --primary-color: #ff6200;
+    --secondary-color: #ffffff;
+    --grey: #aaaaaa;
+    --light-grey: #f6f6f6;
+    --white: #ffffff;
+    --text-dark-orange: #c33d09;
+}
+
+/* base css */
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/* utlity classes */
+
+.font-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.text-grey {
+    color: var(--grey);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-dark-orange {
+    color: var(--text-dark-orange)
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+
+/* standard pagewide css */
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.contact-box--right h2,
+.contact-box--left h2 {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+h2.underline:before {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background-color: #585858;
+    bottom: 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.subheader-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.subheader {
+    background-color: var(--primary-color);
+    padding: 5px 0;
+}
+
+.subheader-login {
+    display: flex;
+    gap: 20px;
+}
+
+.subheader-login a {
+    text-decoration: none;
+}
+
+nav {
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: var(--grey);
+}
+
+li:hover {
+    color: #585858;
+}
+
+.menu>li:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+.link {
+    position: relative;
+}
+
+.menu-level-1 {
+    display: block;
+    transform: translate(-50%);
+    left: 50%;
+    top: 100%;
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-level-2 {
+    position: absolute;
+    left: 100%;
+    top: 55%;
+    width: 100px;
+    background: var(--);
+}
+
+.menu-level-1,
+.menu-level-2 {
+    display: none;
+    padding: 10px 0;
+    border: 1px solid var(--grey);
+    background-color: var(--white);
+}
+
+.menu-level-1 li,
+.menu-level-2 li {
+    padding: 5px 0;
+}
+
+.menu:nth-child(2):hover .menu-level-1 {
+    display: block;
+}
+
+.sub-link:hover>.menu-level-2 {
+    display: block;
+}
+
+.breadcrumbs {
+    display: flex;
+    gap: 5px;
+}
+
+input,
+button,
+textarea {
+    padding: 12px;
+    margin: 5px 0;
+    border: 0;
+    background-color: var(--light-grey);
+    border: 1px solid #e3e3e3;
+}
+
+button {
+    background-color: var(--primary-color);
+    width: 20%;
+    border: none;
+}
+
+.contact-box {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-box--number-email {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.contact-box--right {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-box--right-social ul {
+    display: flex;
+    gap: 5px;
+    margin-top: 50px;
+}
+
+.contact-box--right-social ul li {
+    border: 1px solid white;
+}
+
+.contact-box--right-social ul li a svg path {
+    fill: var(--grey) !important;
+}
+
+.contact-box--right-social ul li a svg path:last-child {
+    fill: var(--white) !important;
+}
+
+.contact-box--right-social ul li a:hover svg path {
+    fill: #323232 !important;
+}
+
+.contact-box--right-social ul li a svg path:last-child {
+    fill: var(--white) !important;
+}
